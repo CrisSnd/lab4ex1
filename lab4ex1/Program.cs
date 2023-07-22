@@ -16,24 +16,25 @@ namespace MyApp
             int elementeVector = int.Parse(Console.ReadLine());
 
 
-            int[] dimensiuneVector = AfisareVector(elementeVector);
+            int[] vector = CitesteVector(elementeVector);
+
+            AfisareElementeVector(vector);
+
+            InversareElementeVector(vector);
 
 
-            InversareElementeVector(dimensiuneVector);
 
 
 
 
-
-
-            static int[] AfisareVector(int dimensiuneVector)
+            static int[] CitesteVector(int vct)
             {
 
-                int[] numereVector = new int[dimensiuneVector];
+                int[] numereVector = new int [vct];
 
                 Console.WriteLine("\n" + "Introduceti elementele vectorului:");
 
-                for (int i = 0; i < dimensiuneVector; i++)
+                for (int i = 0; i < vct; i++)
                 {
                     numereVector[i] = int.Parse(Console.ReadLine());
                 }
@@ -41,6 +42,25 @@ namespace MyApp
                 return numereVector;
             }
 
+
+
+
+
+            static int[] AfisareElementeVector(int[]elemVector)
+
+            {
+                int[] afisareElementeVector= elemVector;
+
+                Console.WriteLine("Vectorul introdus este: ");
+               
+                foreach(int i in afisareElementeVector)
+                {
+                      Console.WriteLine(i);
+                 }
+  
+                return afisareElementeVector;
+
+            }
 
 
 
